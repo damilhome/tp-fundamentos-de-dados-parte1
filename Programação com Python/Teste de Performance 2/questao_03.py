@@ -29,19 +29,41 @@ def factorial(num):
     
     return factorial
 
-def display_factorial(sequence):
+def read_numbers():
     '''
-    Reads and displays the factorial of each number in a sequence of integers.
+    Request and store X numbers from the user and returns a list with it.
 
-    Args:
-        sequence (list): The sequence of integers.
+    Returns:
+        list: A list with the numbers entered by the user.
+    '''
+
+    list = []
+
+    while True:
+        try:
+            number = int(input('Enter a number higher than zero (0 to exit): '))
+            if(number < 0):
+                print('Number smaller than zero')
+                continue
+            list.append(number)
+            if(number == 0):
+                break
+        except:
+            print('Non-numeric value entered.')
+
+    return list
+
+def display_factorial():
+    '''
+    Request numbers from the user and displays the factorial of each number.
 
     Returns:
         None.
     '''
 
+    sequence = read_numbers()
+
     for num in sequence:
         print(f'Factorial of {num}: {factorial(num)}')
 
-sequence = [5, 4, 3, 2, 1, 0]
-display_factorial(sequence)
+display_factorial()
