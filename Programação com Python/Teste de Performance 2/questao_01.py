@@ -14,9 +14,9 @@ def vowel_counter():
     characters_sequence = ''
 
     while True:
-        character = input('Type a character (or \e to exit): ')
+        character = input('Type a character (or type "exit" to exit): ')
         
-        if(character == '\e'):
+        if(character == 'exit'):
             break
         else:
             characters_sequence += character
