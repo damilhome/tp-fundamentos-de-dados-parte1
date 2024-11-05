@@ -18,12 +18,12 @@ def read_numbers():
 
     while True:
         try:
-            number = input('Enter a number or type "exit" to exit: ')
-            if(number == 'exit'):
+            number = int(input('Enter a number (0 to exit): '))
+            list.append(number)
+            if(number == 0):
                 break
-            list.append(int(number))
         except:
-            print('Non-numeric value entered')
+            print('Non-numeric value entered.')
 
     return list
 
