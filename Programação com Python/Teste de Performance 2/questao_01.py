@@ -1,13 +1,20 @@
-def vowel_counter(characters_sequence):
+def vowel_counter():
     '''
-    Counts the number of vowels in a character sequence.
-
-    Args:
-        characters_sequence (str): The character sequence.
+    Ask the user for a character and returns the number of vowels typed.
 
     Returns:
-        int: The number of vowels in the character sequence.
+        int: The number of vowels typed by the user.
     '''
+    
+    characters_sequence = ''
+
+    while True:
+        character = input('Type a character (or \e to exit): ')
+        
+        if(character == '\e'):
+            break
+        else:
+            characters_sequence += character
 
     vowels = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'â', 'ê', 'î', 'ô', 'û', 'ã', 'õ', 'ä', 'ë', 'ï', 'ö', 'ü']
     number = 0
@@ -18,5 +25,4 @@ def vowel_counter(characters_sequence):
     
     return number
 
-characters_sequence = input('Type the characters sequence: ')
-print(vowel_counter(characters_sequence))
+print(f'Number of vowels: {vowel_counter()}')
