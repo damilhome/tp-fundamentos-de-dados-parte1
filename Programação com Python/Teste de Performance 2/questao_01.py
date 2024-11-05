@@ -1,3 +1,8 @@
+'''
+Faça um programa que leia uma sequência de caracteres terminada por um ponto (.) e mostre o número de vogais digitadas.
+Cada caractere deve ser digitado/lido separadamente.
+'''
+
 def vowel_counter():
     '''
     Ask the user for a character and returns the number of vowels typed.
