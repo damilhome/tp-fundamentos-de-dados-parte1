@@ -5,6 +5,7 @@ Exemplo: O nome “Maria Maia”, deverá ser apresentado como “MAIA, Maria”
 '''
 
 def formatar_nome():
+    '''Formata o nome e sobrenome digitados pelo usuário para SOBRENOME, Nome.'''
     nome_completo = input('Digite seu nome e sobrenome: ')
     nome = nome_completo.split(' ')
     print(f'{nome[-1].upper()}, {nome[0].capitalize()}')

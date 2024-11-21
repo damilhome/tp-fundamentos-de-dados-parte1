@@ -7,6 +7,7 @@ Exemplo:  “Lu Ma”. Se a entrada não for válida, exibir uma mensagem de err
 '''
 
 def verificar_nome():
+    '''Verifica se um nome e sobrenome digitados pelo usuários são válidos, isso é, têm pelo menos 2 caracteres.'''
     nome_completo = input('Digite o nome e sobrenome: ')
     nome = nome_completo.split(' ')
     if(len(nome) < 2):
